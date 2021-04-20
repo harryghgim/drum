@@ -3,6 +3,18 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: rgb(67, 87, 87);
+
+    #hide {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1s, visibility 1s;
+    }
+    #show {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 1s, visibility 1s;
+    }
 
     #drum-machine {
         display: grid;
@@ -28,5 +40,16 @@ body {
         }
     }
 
+}
+
+@keyframes fade {
+    0% { 
+        opacity: 1;
+        visibility: visible;
+    }
+    100% { 
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
